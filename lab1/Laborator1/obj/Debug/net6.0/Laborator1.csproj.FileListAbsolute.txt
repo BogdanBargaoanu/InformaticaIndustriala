@@ -1,0 +1,14 @@
+E:\facultate\informatica industriala\lab1\Laborator1\bin\Debug\net6.0\Laborator1.exe
+E:\facultate\informatica industriala\lab1\Laborator1\bin\Debug\net6.0\Laborator1.deps.json
+E:\facultate\informatica industriala\lab1\Laborator1\bin\Debug\net6.0\Laborator1.runtimeconfig.json
+E:\facultate\informatica industriala\lab1\Laborator1\bin\Debug\net6.0\Laborator1.dll
+E:\facultate\informatica industriala\lab1\Laborator1\bin\Debug\net6.0\Laborator1.pdb
+E:\facultate\informatica industriala\lab1\Laborator1\obj\Debug\net6.0\Laborator1.GeneratedMSBuildEditorConfig.editorconfig
+E:\facultate\informatica industriala\lab1\Laborator1\obj\Debug\net6.0\Laborator1.AssemblyInfoInputs.cache
+E:\facultate\informatica industriala\lab1\Laborator1\obj\Debug\net6.0\Laborator1.AssemblyInfo.cs
+E:\facultate\informatica industriala\lab1\Laborator1\obj\Debug\net6.0\Laborator1.csproj.CoreCompileInputs.cache
+E:\facultate\informatica industriala\lab1\Laborator1\obj\Debug\net6.0\Laborator1.dll
+E:\facultate\informatica industriala\lab1\Laborator1\obj\Debug\net6.0\refint\Laborator1.dll
+E:\facultate\informatica industriala\lab1\Laborator1\obj\Debug\net6.0\Laborator1.pdb
+E:\facultate\informatica industriala\lab1\Laborator1\obj\Debug\net6.0\Laborator1.genruntimeconfig.cache
+E:\facultate\informatica industriala\lab1\Laborator1\obj\Debug\net6.0\ref\Laborator1.dll
