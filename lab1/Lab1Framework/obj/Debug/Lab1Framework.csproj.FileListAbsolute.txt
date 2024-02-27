@@ -1,0 +1,14 @@
+E:\facultate\informatica industriala\lab1\Lab1Framework\bin\Debug\Lab1Framework.exe.config
+E:\facultate\informatica industriala\lab1\Lab1Framework\bin\Debug\Lab1Framework.exe
+E:\facultate\informatica industriala\lab1\Lab1Framework\bin\Debug\Lab1Framework.pdb
+E:\facultate\informatica industriala\lab1\Lab1Framework\obj\Debug\Lab1Framework.csproj.AssemblyReference.cache
+E:\facultate\informatica industriala\lab1\Lab1Framework\obj\Debug\Lab1Framework.csproj.CoreCompileInputs.cache
+E:\facultate\informatica industriala\lab1\Lab1Framework\obj\Debug\Lab1Framework.exe
+E:\facultate\informatica industriala\lab1\Lab1Framework\obj\Debug\Lab1Framework.pdb
+E:\facultate\informatica industriala\InformaticaIndustriala\lab1\Lab1Framework\bin\Debug\Lab1Framework.exe.config
+E:\facultate\informatica industriala\InformaticaIndustriala\lab1\Lab1Framework\bin\Debug\Lab1Framework.exe
+E:\facultate\informatica industriala\InformaticaIndustriala\lab1\Lab1Framework\bin\Debug\Lab1Framework.pdb
+E:\facultate\informatica industriala\InformaticaIndustriala\lab1\Lab1Framework\obj\Debug\Lab1Framework.csproj.AssemblyReference.cache
+E:\facultate\informatica industriala\InformaticaIndustriala\lab1\Lab1Framework\obj\Debug\Lab1Framework.csproj.CoreCompileInputs.cache
+E:\facultate\informatica industriala\InformaticaIndustriala\lab1\Lab1Framework\obj\Debug\Lab1Framework.exe
+E:\facultate\informatica industriala\InformaticaIndustriala\lab1\Lab1Framework\obj\Debug\Lab1Framework.pdb
