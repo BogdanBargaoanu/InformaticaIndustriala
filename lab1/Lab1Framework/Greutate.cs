@@ -11,9 +11,9 @@ namespace Lab1Framework
         public static double GreutateIdeala()
         {
             Console.WriteLine("Introduceti inaltimea in cm: ");
-            int inaltime = Convert.ToInt32(Console.ReadLine());
+            double inaltime = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Introduceti varsta: ");
-            int varsta = Convert.ToInt32(Console.ReadLine());
+            double varsta = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Introduceti sexul (m/f): ");
             char input = Convert.ToChar(Console.ReadLine());
             if(input == 'm')
