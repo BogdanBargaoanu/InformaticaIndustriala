@@ -1,0 +1,10 @@
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex4TabControl\bin\Debug\Ex4TabControl.exe.config
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex4TabControl\bin\Debug\Ex4TabControl.exe
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex4TabControl\bin\Debug\Ex4TabControl.pdb
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex4TabControl\obj\Debug\Ex4TabControl.csproj.AssemblyReference.cache
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex4TabControl\obj\Debug\Ex4TabControl.Form1.resources
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex4TabControl\obj\Debug\Ex4TabControl.Properties.Resources.resources
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex4TabControl\obj\Debug\Ex4TabControl.csproj.GenerateResource.cache
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex4TabControl\obj\Debug\Ex4TabControl.csproj.CoreCompileInputs.cache
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex4TabControl\obj\Debug\Ex4TabControl.exe
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex4TabControl\obj\Debug\Ex4TabControl.pdb

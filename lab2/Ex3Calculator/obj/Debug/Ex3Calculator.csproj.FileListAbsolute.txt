@@ -1,0 +1,10 @@
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex3Calculator\bin\Debug\Ex3Calculator.exe.config
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex3Calculator\bin\Debug\Ex3Calculator.exe
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex3Calculator\bin\Debug\Ex3Calculator.pdb
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex3Calculator\obj\Debug\Ex3Calculator.csproj.AssemblyReference.cache
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex3Calculator\obj\Debug\Ex3Calculator.Form1.resources
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex3Calculator\obj\Debug\Ex3Calculator.Properties.Resources.resources
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex3Calculator\obj\Debug\Ex3Calculator.csproj.GenerateResource.cache
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex3Calculator\obj\Debug\Ex3Calculator.csproj.CoreCompileInputs.cache
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex3Calculator\obj\Debug\Ex3Calculator.exe
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex3Calculator\obj\Debug\Ex3Calculator.pdb

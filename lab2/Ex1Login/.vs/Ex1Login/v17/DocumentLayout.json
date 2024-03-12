@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\facultate\\informatica industriala\\InformaticaIndustriala\\lab2\\Ex1Login\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BE8392B7-C8DC-4FA8-93B4-16F39098CC53}|Ex1Login.csproj|e:\\facultate\\informatica industriala\\informaticaindustriala\\lab2\\ex1login\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE8392B7-C8DC-4FA8-93B4-16F39098CC53}|Ex1Login.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE8392B7-C8DC-4FA8-93B4-16F39098CC53}|Ex1Login.csproj|e:\\facultate\\informatica industriala\\informaticaindustriala\\lab2\\ex1login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE8392B7-C8DC-4FA8-93B4-16F39098CC53}|Ex1Login.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE8392B7-C8DC-4FA8-93B4-16F39098CC53}|Ex1Login.csproj|e:\\facultate\\informatica industriala\\informaticaindustriala\\lab2\\ex1login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE8392B7-C8DC-4FA8-93B4-16F39098CC53}|Ex1Login.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE8392B7-C8DC-4FA8-93B4-16F39098CC53}|Ex1Login.csproj|e:\\facultate\\informatica industriala\\informaticaindustriala\\lab2\\ex1login\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE8392B7-C8DC-4FA8-93B4-16F39098CC53}|Ex1Login.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cs",
+              "DocumentMoniker": "E:\\facultate\\informatica industriala\\InformaticaIndustriala\\lab2\\Ex1Login\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "E:\\facultate\\informatica industriala\\InformaticaIndustriala\\lab2\\Ex1Login\\Login.cs",
+              "RelativeToolTip": "Login.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowCUAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T10:38:20.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "E:\\facultate\\informatica industriala\\InformaticaIndustriala\\lab2\\Ex1Login\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "E:\\facultate\\informatica industriala\\InformaticaIndustriala\\lab2\\Ex1Login\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T10:35:07.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "E:\\facultate\\informatica industriala\\InformaticaIndustriala\\lab2\\Ex1Login\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "E:\\facultate\\informatica industriala\\InformaticaIndustriala\\lab2\\Ex1Login\\MainForm.cs [Design]",
+              "RelativeToolTip": "MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T10:34:56.137Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "E:\\facultate\\informatica industriala\\InformaticaIndustriala\\lab2\\Ex1Login\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "E:\\facultate\\informatica industriala\\InformaticaIndustriala\\lab2\\Ex1Login\\Login.cs [Design]",
+              "RelativeToolTip": "Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T10:33:42.4Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

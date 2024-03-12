@@ -1,0 +1,11 @@
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex1Login\bin\Debug\Ex1Login.exe.config
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex1Login\bin\Debug\Ex1Login.exe
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex1Login\bin\Debug\Ex1Login.pdb
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex1Login\obj\Debug\Ex1Login.csproj.AssemblyReference.cache
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex1Login\obj\Debug\Ex1Login.Login.resources
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex1Login\obj\Debug\Ex1Login.Properties.Resources.resources
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex1Login\obj\Debug\Ex1Login.csproj.GenerateResource.cache
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex1Login\obj\Debug\Ex1Login.csproj.CoreCompileInputs.cache
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex1Login\obj\Debug\Ex1Login.exe
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex1Login\obj\Debug\Ex1Login.pdb
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex1Login\obj\Debug\Ex1Login.MainForm.resources

@@ -1,0 +1,10 @@
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex2Copiere\bin\Debug\Ex2Copiere.exe.config
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex2Copiere\bin\Debug\Ex2Copiere.exe
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex2Copiere\bin\Debug\Ex2Copiere.pdb
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex2Copiere\obj\Debug\Ex2Copiere.csproj.AssemblyReference.cache
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex2Copiere\obj\Debug\Ex2Copiere.Properties.Resources.resources
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex2Copiere\obj\Debug\Ex2Copiere.csproj.GenerateResource.cache
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex2Copiere\obj\Debug\Ex2Copiere.csproj.CoreCompileInputs.cache
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex2Copiere\obj\Debug\Ex2Copiere.exe
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex2Copiere\obj\Debug\Ex2Copiere.pdb
+E:\facultate\informatica industriala\InformaticaIndustriala\lab2\Ex2Copiere\obj\Debug\Ex2Copiere.Form1.resources
