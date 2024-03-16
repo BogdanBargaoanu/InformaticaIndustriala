@@ -8,3 +8,13 @@ E:\facultate\informatica industriala\InformaticaIndustriala\Tema1\obj\Debug\Tema
 E:\facultate\informatica industriala\InformaticaIndustriala\Tema1\obj\Debug\Tema1.csproj.CoreCompileInputs.cache
 E:\facultate\informatica industriala\InformaticaIndustriala\Tema1\obj\Debug\Tema1.exe
 E:\facultate\informatica industriala\InformaticaIndustriala\Tema1\obj\Debug\Tema1.pdb
+E:\InformaticaIndustriala\Tema1\bin\Debug\Tema1.exe.config
+E:\InformaticaIndustriala\Tema1\bin\Debug\Tema1.exe
+E:\InformaticaIndustriala\Tema1\bin\Debug\Tema1.pdb
+E:\InformaticaIndustriala\Tema1\obj\Debug\Tema1.csproj.AssemblyReference.cache
+E:\InformaticaIndustriala\Tema1\obj\Debug\Tema1.Form1.resources
+E:\InformaticaIndustriala\Tema1\obj\Debug\Tema1.Properties.Resources.resources
+E:\InformaticaIndustriala\Tema1\obj\Debug\Tema1.csproj.GenerateResource.cache
+E:\InformaticaIndustriala\Tema1\obj\Debug\Tema1.csproj.CoreCompileInputs.cache
+E:\InformaticaIndustriala\Tema1\obj\Debug\Tema1.exe
+E:\InformaticaIndustriala\Tema1\obj\Debug\Tema1.pdb

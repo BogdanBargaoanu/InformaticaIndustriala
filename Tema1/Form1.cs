@@ -14,6 +14,7 @@ namespace Tema1
     {
         private long id = -1;
         private bool adaugare = false;
+        string format = "dd/MM/yyyy";
         public Form1()
         {
             InitializeComponent();
@@ -124,6 +125,11 @@ namespace Tema1
             listBox2.Enabled = true;
             listBox3.Enabled = true;
             adaugare = false;
+            textBox1.Enabled = false;
+            richTextBox1.Enabled = false;
+            dateTimePicker1.Enabled = false;
+            radioButton1.Enabled = false;
+            radioButton2.Enabled = false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -180,12 +186,21 @@ namespace Tema1
         {
             if(listBox2.ContainsFocus && listBox2.SelectedIndex >= 0)
             {
+                textBox1.Enabled = true;
+                richTextBox1.Enabled = true;
+                dateTimePicker1.Enabled = true;
+                radioButton1.Enabled = true;
+                radioButton2.Enabled = true;
                 listBox1.SelectedIndex = listBox2.SelectedIndex;
                 listBox3.SelectedIndex = listBox2.SelectedIndex;
                 lines = System.IO.File.ReadAllLines("reminders.txt");
                 textBox1.Text = listBox1.SelectedItem.ToString();
                 richTextBox1.Text = listBox3.SelectedItem.ToString();
-                dateTimePicker1.Value = DateTime.Parse(listBox2.SelectedItem.ToString());
+                DateTime temp;
+                if (DateTime.TryParseExact(listBox2.SelectedItem.ToString(), format, null, System.Globalization.DateTimeStyles.None, out temp))
+                {
+                    dateTimePicker1.Value = temp;
+                }
                 radioButton1.Checked = lines[listBox2.SelectedIndex].Split(' ')[3] == "True" ? true : false;
                 radioButton2.Checked = lines[listBox2.SelectedIndex].Split(' ')[4] == "True" ? true : false;
             }
@@ -196,12 +211,21 @@ namespace Tema1
         {
             if(listBox1.ContainsFocus && listBox1.SelectedIndex >= 0)
             {
+                textBox1.Enabled = true;
+                richTextBox1.Enabled = true;
+                dateTimePicker1.Enabled = true;
+                radioButton1.Enabled = true;
+                radioButton2.Enabled = true;
                 listBox2.SelectedIndex = listBox1.SelectedIndex;
                 listBox3.SelectedIndex = listBox1.SelectedIndex;
                 lines = System.IO.File.ReadAllLines("reminders.txt");
                 textBox1.Text = listBox1.SelectedItem.ToString();
                 richTextBox1.Text = listBox3.SelectedItem.ToString();
-                dateTimePicker1.Value = DateTime.Parse(listBox2.SelectedItem.ToString());
+                DateTime temp;
+                if (DateTime.TryParseExact(listBox2.SelectedItem.ToString(), format, null, System.Globalization.DateTimeStyles.None, out temp))
+                {
+                    dateTimePicker1.Value = temp;
+                }
                 radioButton1.Checked = lines[listBox2.SelectedIndex].Split(' ')[3] == "True" ? true : false;
                 radioButton2.Checked = lines[listBox2.SelectedIndex].Split(' ')[4] == "True" ? true : false;
             }
@@ -211,12 +235,21 @@ namespace Tema1
         {
             if(listBox3.ContainsFocus && listBox3.SelectedIndex >= 0)
             {
+                textBox1.Enabled = true;
+                richTextBox1.Enabled = true;
+                dateTimePicker1.Enabled = true;
+                radioButton1.Enabled = true;
+                radioButton2.Enabled = true;
                 listBox1.SelectedIndex = listBox3.SelectedIndex;
                 listBox2.SelectedIndex = listBox3.SelectedIndex;
                 lines = System.IO.File.ReadAllLines("reminders.txt");
                 textBox1.Text = listBox1.SelectedItem.ToString();
                 richTextBox1.Text = listBox3.SelectedItem.ToString();
-                dateTimePicker1.Value = DateTime.Parse(listBox2.SelectedItem.ToString());
+                DateTime temp;
+                if (DateTime.TryParseExact(listBox2.SelectedItem.ToString(), format, null, System.Globalization.DateTimeStyles.None, out temp))
+                {
+                    dateTimePicker1.Value = temp;
+                }
                 radioButton1.Checked = lines[listBox2.SelectedIndex].Split(' ')[3] == "True" ? true : false;
                 radioButton2.Checked = lines[listBox2.SelectedIndex].Split(' ')[4] == "True" ? true : false;
             }
@@ -224,6 +257,7 @@ namespace Tema1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            textBox1.Focus();
             button3.Hide();
             panel1.Show();
             adaugare = true;
