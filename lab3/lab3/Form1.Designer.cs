@@ -35,8 +35,9 @@
             this.facultatiTableAdapter = new lab3.dbObjectDataSetTableAdapters.FacultatiTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.universitati1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.buttonDeleteUniv = new System.Windows.Forms.Button();
@@ -64,22 +65,20 @@
             this.universitatiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.universitati1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.universitatiTableAdapter = new lab3.dbObjectDataSetTableAdapters.UniversitatiTableAdapter();
             this.tableTableAdapter = new lab3.dbObjectDataSetTableAdapters.TableTableAdapter();
             this.universitati1TableAdapter = new lab3.dbObjectDataSetTableAdapters.Universitati1TableAdapter();
-            this.nameUnivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeFacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.facultatiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbObjectDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.universitati1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.universitatiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.universitati1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // listBoxFacultati
@@ -128,30 +127,40 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameUnivDataGridViewTextBoxColumn,
-            this.numeFacDataGridViewTextBoxColumn,
-            this.codeDataGridViewTextBoxColumn,
-            this.idDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tableBindingSource;
+            this.Column1,
+            this.Column2,
+            this.Column3});
             this.dataGridView1.Location = new System.Drawing.Point(631, 66);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(396, 222);
             this.dataGridView1.TabIndex = 21;
+            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
+            this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
             // 
-            // universitati1BindingSource
+            // Column1
             // 
-            this.universitati1BindingSource.DataMember = "Universitati1";
-            this.universitati1BindingSource.DataSource = this.dbObjectDataSet;
+            this.Column1.DataPropertyName = "Id";
+            this.Column1.HeaderText = "Id";
+            this.Column1.Name = "Column1";
+            this.Column1.Visible = false;
             // 
-            // tableBindingSource
+            // Column2
             // 
-            this.tableBindingSource.DataMember = "Table";
-            this.tableBindingSource.DataSource = this.dbObjectDataSet;
+            this.Column2.DataPropertyName = "NumeFac";
+            this.Column2.HeaderText = "NumeFac";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Code";
+            this.Column3.HeaderText = "NumeUniv";
+            this.Column3.Name = "Column3";
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // button1
             // 
@@ -409,6 +418,16 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Universitati";
             // 
+            // universitati1BindingSource
+            // 
+            this.universitati1BindingSource.DataMember = "Universitati1";
+            this.universitati1BindingSource.DataSource = this.dbObjectDataSet;
+            // 
+            // tableBindingSource
+            // 
+            this.tableBindingSource.DataMember = "Table";
+            this.tableBindingSource.DataSource = this.dbObjectDataSet;
+            // 
             // universitatiTableAdapter
             // 
             this.universitatiTableAdapter.ClearBeforeFill = true;
@@ -420,38 +439,6 @@
             // universitati1TableAdapter
             // 
             this.universitati1TableAdapter.ClearBeforeFill = true;
-            // 
-            // nameUnivDataGridViewTextBoxColumn
-            // 
-            this.nameUnivDataGridViewTextBoxColumn.DataPropertyName = "NameUniv";
-            this.nameUnivDataGridViewTextBoxColumn.HeaderText = "NameUniv";
-            this.nameUnivDataGridViewTextBoxColumn.Name = "nameUnivDataGridViewTextBoxColumn";
-            // 
-            // numeFacDataGridViewTextBoxColumn
-            // 
-            this.numeFacDataGridViewTextBoxColumn.DataPropertyName = "Code";
-            this.numeFacDataGridViewTextBoxColumn.DataSource = this.universitati1BindingSource;
-            this.numeFacDataGridViewTextBoxColumn.DisplayMember = "NameUniv";
-            this.numeFacDataGridViewTextBoxColumn.HeaderText = "NumeFac";
-            this.numeFacDataGridViewTextBoxColumn.Name = "numeFacDataGridViewTextBoxColumn";
-            this.numeFacDataGridViewTextBoxColumn.ReadOnly = true;
-            this.numeFacDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.numeFacDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.numeFacDataGridViewTextBoxColumn.ValueMember = "Code";
-            // 
-            // codeDataGridViewTextBoxColumn
-            // 
-            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
-            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
-            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Form1
             // 
@@ -467,13 +454,13 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.universitati1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.universitatiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.universitati1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -518,10 +505,9 @@
         private dbObjectDataSetTableAdapters.TableTableAdapter tableTableAdapter;
         private System.Windows.Forms.BindingSource universitati1BindingSource;
         private dbObjectDataSetTableAdapters.Universitati1TableAdapter universitati1TableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameUnivDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn numeFacDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column3;
     }
 }
 

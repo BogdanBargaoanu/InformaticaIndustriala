@@ -227,33 +227,33 @@ SELECT Code, NameUniv FROM Universitati WHERE (Code = @Code)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Table" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_RowDeletingName="TableRowDeleting" msprop:Generator_RowEvArgName="TableRowChangeEvent" msprop:Generator_TablePropName="Table" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_RowClassName="TableRow" msprop:Generator_TableVarName="tableTable" msprop:Generator_UserTableName="Table">
+        <xs:element name="Table" msprop:Generator_RowClassName="TableRow" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_RowDeletingName="TableRowDeleting" msprop:Generator_RowEvArgName="TableRowChangeEvent" msprop:Generator_TablePropName="Table" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_UserTableName="Table" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_TableVarName="tableTable">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="NameUniv" msprop:Generator_ColumnPropNameInRow="NameUniv" msprop:Generator_ColumnPropNameInTable="NameUnivColumn" msprop:Generator_ColumnVarNameInTable="columnNameUniv" msprop:Generator_UserColumnName="NameUniv">
+              <xs:element name="NameUniv" msprop:Generator_UserColumnName="NameUniv" msprop:Generator_ColumnPropNameInTable="NameUnivColumn" msprop:Generator_ColumnPropNameInRow="NameUniv" msprop:Generator_ColumnVarNameInTable="columnNameUniv">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="NumeFac" msprop:Generator_ColumnPropNameInRow="NumeFac" msprop:Generator_ColumnPropNameInTable="NumeFacColumn" msprop:Generator_ColumnVarNameInTable="columnNumeFac" msprop:Generator_UserColumnName="NumeFac">
+              <xs:element name="NumeFac" msprop:Generator_UserColumnName="NumeFac" msprop:Generator_ColumnPropNameInTable="NumeFacColumn" msprop:Generator_ColumnPropNameInRow="NumeFac" msprop:Generator_ColumnVarNameInTable="columnNumeFac">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Code" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="Code" msprop:Generator_ColumnPropNameInTable="CodeColumn" msprop:Generator_ColumnVarNameInTable="columnCode" msprop:Generator_UserColumnName="Code" type="xs:int" />
-              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Code" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Code" msprop:Generator_ColumnPropNameInTable="CodeColumn" msprop:Generator_ColumnPropNameInRow="Code" msprop:Generator_ColumnVarNameInTable="columnCode" type="xs:int" />
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Universitati1" msprop:Generator_RowEvHandlerName="Universitati1RowChangeEventHandler" msprop:Generator_RowDeletedName="Universitati1RowDeleted" msprop:Generator_RowDeletingName="Universitati1RowDeleting" msprop:Generator_RowEvArgName="Universitati1RowChangeEvent" msprop:Generator_TablePropName="Universitati1" msprop:Generator_RowChangedName="Universitati1RowChanged" msprop:Generator_RowChangingName="Universitati1RowChanging" msprop:Generator_TableClassName="Universitati1DataTable" msprop:Generator_RowClassName="Universitati1Row" msprop:Generator_TableVarName="tableUniversitati1" msprop:Generator_UserTableName="Universitati1">
+        <xs:element name="Universitati1" msprop:Generator_RowClassName="Universitati1Row" msprop:Generator_RowEvHandlerName="Universitati1RowChangeEventHandler" msprop:Generator_RowDeletedName="Universitati1RowDeleted" msprop:Generator_RowDeletingName="Universitati1RowDeleting" msprop:Generator_RowEvArgName="Universitati1RowChangeEvent" msprop:Generator_TablePropName="Universitati1" msprop:Generator_RowChangedName="Universitati1RowChanged" msprop:Generator_UserTableName="Universitati1" msprop:Generator_RowChangingName="Universitati1RowChanging" msprop:Generator_TableClassName="Universitati1DataTable" msprop:Generator_TableVarName="tableUniversitati1">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Code" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="Code" msprop:Generator_ColumnPropNameInTable="CodeColumn" msprop:Generator_ColumnVarNameInTable="columnCode" msprop:Generator_UserColumnName="Code" type="xs:int" />
-              <xs:element name="NameUniv" msprop:Generator_ColumnPropNameInRow="NameUniv" msprop:Generator_ColumnPropNameInTable="NameUnivColumn" msprop:Generator_ColumnVarNameInTable="columnNameUniv" msprop:Generator_UserColumnName="NameUniv">
+              <xs:element name="Code" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Code" msprop:Generator_ColumnPropNameInTable="CodeColumn" msprop:Generator_ColumnPropNameInRow="Code" msprop:Generator_ColumnVarNameInTable="columnCode" type="xs:int" />
+              <xs:element name="NameUniv" msprop:Generator_UserColumnName="NameUniv" msprop:Generator_ColumnPropNameInTable="NameUnivColumn" msprop:Generator_ColumnPropNameInRow="NameUniv" msprop:Generator_ColumnVarNameInTable="columnNameUniv">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
@@ -285,7 +285,7 @@ SELECT Code, NameUniv FROM Universitati WHERE (Code = @Code)</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Facultati_Universitati" msdata:parent="Universitati" msdata:child="Facultati" msdata:parentkey="Code" msdata:childkey="Code" msprop:Generator_UserParentTable="Universitati" msprop:Generator_UserChildTable="Facultati" msprop:Generator_RelationVarName="relationFK_Facultati_Universitati" msprop:Generator_ChildPropName="GetFacultatiRows" msprop:Generator_UserRelationName="FK_Facultati_Universitati" msprop:Generator_ParentPropName="UniversitatiRow" />
+      <msdata:Relationship name="FK_Facultati_Universitati" msdata:parent="Universitati" msdata:child="Facultati" msdata:parentkey="Code" msdata:childkey="Code" msprop:Generator_UserParentTable="Universitati" msprop:Generator_UserChildTable="Facultati" msprop:Generator_RelationVarName="relationFK_Facultati_Universitati" msprop:Generator_ChildPropName="GetFacultatiRows" msprop:Generator_ParentPropName="UniversitatiRow" msprop:Generator_UserRelationName="FK_Facultati_Universitati" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

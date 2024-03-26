@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/DataClasses1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="dc4041a1-8430-4a78-b41c-6462b60d6ae7" absoluteBounds="4.625, 1.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClasses1DataContext/Facultati" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f5e87f81-964b-42c2-a261-60e701e1b630" absoluteBounds="4.64, 2.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="74063b47-7bbd-455f-9799-5a9822eba8bc" absoluteBounds="4.625, 4.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClasses1DataContext/Universitati" />
+      <nestedChildShapes>
+        <elementListCompartment Id="88222bd2-1f6e-4c55-8c39-fca10ad30e88" absoluteBounds="4.64, 5.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.625 : 4.625); (5.625 : 3.2612939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/Universitati/Universitati_Facultati" />
+      <nodes>
+        <classShapeMoniker Id="74063b47-7bbd-455f-9799-5a9822eba8bc" />
+        <classShapeMoniker Id="dc4041a1-8430-4a78-b41c-6462b60d6ae7" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
