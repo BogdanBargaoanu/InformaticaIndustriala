@@ -34,7 +34,12 @@
             this.dbObjectDataSet = new lab3.dbObjectDataSet();
             this.facultatiTableAdapter = new lab3.dbObjectDataSetTableAdapters.FacultatiTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.universitati1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonDeleteUniv = new System.Windows.Forms.Button();
             this.buttonUpdateUniv = new System.Windows.Forms.Button();
             this.buttonNewRowUniv = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -46,6 +51,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonDeleteFacult = new System.Windows.Forms.Button();
             this.textBoxCode = new System.Windows.Forms.TextBox();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.textBoxFacultati = new System.Windows.Forms.TextBox();
@@ -59,12 +65,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.universitatiTableAdapter = new lab3.dbObjectDataSetTableAdapters.UniversitatiTableAdapter();
-            this.buttonDeleteUniv = new System.Windows.Forms.Button();
-            this.buttonDeleteFacult = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tableTableAdapter = new lab3.dbObjectDataSetTableAdapters.TableTableAdapter();
+            this.universitati1TableAdapter = new lab3.dbObjectDataSetTableAdapters.Universitati1TableAdapter();
+            this.nameUnivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeFacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.facultatiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbObjectDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.universitati1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.universitatiBindingSource)).BeginInit();
@@ -98,6 +110,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -108,10 +121,47 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(818, 530);
+            this.groupBox1.Size = new System.Drawing.Size(1074, 542);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameUnivDataGridViewTextBoxColumn,
+            this.numeFacDataGridViewTextBoxColumn,
+            this.codeDataGridViewTextBoxColumn,
+            this.idDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.tableBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(631, 66);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(396, 222);
+            this.dataGridView1.TabIndex = 21;
+            // 
+            // universitati1BindingSource
+            // 
+            this.universitati1BindingSource.DataMember = "Universitati1";
+            this.universitati1BindingSource.DataSource = this.dbObjectDataSet;
+            // 
+            // tableBindingSource
+            // 
+            this.tableBindingSource.DataMember = "Table";
+            this.tableBindingSource.DataSource = this.dbObjectDataSet;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(538, 402);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Insert univ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox3
             // 
@@ -132,6 +182,16 @@
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Sectiune universitati";
+            // 
+            // buttonDeleteUniv
+            // 
+            this.buttonDeleteUniv.Location = new System.Drawing.Point(36, 166);
+            this.buttonDeleteUniv.Name = "buttonDeleteUniv";
+            this.buttonDeleteUniv.Size = new System.Drawing.Size(75, 23);
+            this.buttonDeleteUniv.TabIndex = 18;
+            this.buttonDeleteUniv.Text = "Delete";
+            this.buttonDeleteUniv.UseVisualStyleBackColor = true;
+            this.buttonDeleteUniv.Click += new System.EventHandler(this.buttonDeleteUniv_Click);
             // 
             // buttonUpdateUniv
             // 
@@ -235,6 +295,16 @@
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sectiune facultati";
+            // 
+            // buttonDeleteFacult
+            // 
+            this.buttonDeleteFacult.Location = new System.Drawing.Point(30, 166);
+            this.buttonDeleteFacult.Name = "buttonDeleteFacult";
+            this.buttonDeleteFacult.Size = new System.Drawing.Size(75, 23);
+            this.buttonDeleteFacult.TabIndex = 19;
+            this.buttonDeleteFacult.Text = "Delete";
+            this.buttonDeleteFacult.UseVisualStyleBackColor = true;
+            this.buttonDeleteFacult.Click += new System.EventHandler(this.buttonDeleteFacult_Click);
             // 
             // textBoxCode
             // 
@@ -343,41 +413,51 @@
             // 
             this.universitatiTableAdapter.ClearBeforeFill = true;
             // 
-            // buttonDeleteUniv
+            // tableTableAdapter
             // 
-            this.buttonDeleteUniv.Location = new System.Drawing.Point(36, 166);
-            this.buttonDeleteUniv.Name = "buttonDeleteUniv";
-            this.buttonDeleteUniv.Size = new System.Drawing.Size(75, 23);
-            this.buttonDeleteUniv.TabIndex = 18;
-            this.buttonDeleteUniv.Text = "Delete";
-            this.buttonDeleteUniv.UseVisualStyleBackColor = true;
-            this.buttonDeleteUniv.Click += new System.EventHandler(this.buttonDeleteUniv_Click);
+            this.tableTableAdapter.ClearBeforeFill = true;
             // 
-            // buttonDeleteFacult
+            // universitati1TableAdapter
             // 
-            this.buttonDeleteFacult.Location = new System.Drawing.Point(30, 166);
-            this.buttonDeleteFacult.Name = "buttonDeleteFacult";
-            this.buttonDeleteFacult.Size = new System.Drawing.Size(75, 23);
-            this.buttonDeleteFacult.TabIndex = 19;
-            this.buttonDeleteFacult.Text = "Delete";
-            this.buttonDeleteFacult.UseVisualStyleBackColor = true;
-            this.buttonDeleteFacult.Click += new System.EventHandler(this.buttonDeleteFacult_Click);
+            this.universitati1TableAdapter.ClearBeforeFill = true;
             // 
-            // button1
+            // nameUnivDataGridViewTextBoxColumn
             // 
-            this.button1.Location = new System.Drawing.Point(574, 271);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Insert univ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.nameUnivDataGridViewTextBoxColumn.DataPropertyName = "NameUniv";
+            this.nameUnivDataGridViewTextBoxColumn.HeaderText = "NameUniv";
+            this.nameUnivDataGridViewTextBoxColumn.Name = "nameUnivDataGridViewTextBoxColumn";
+            // 
+            // numeFacDataGridViewTextBoxColumn
+            // 
+            this.numeFacDataGridViewTextBoxColumn.DataPropertyName = "Code";
+            this.numeFacDataGridViewTextBoxColumn.DataSource = this.universitati1BindingSource;
+            this.numeFacDataGridViewTextBoxColumn.DisplayMember = "NameUniv";
+            this.numeFacDataGridViewTextBoxColumn.HeaderText = "NumeFac";
+            this.numeFacDataGridViewTextBoxColumn.Name = "numeFacDataGridViewTextBoxColumn";
+            this.numeFacDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numeFacDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.numeFacDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.numeFacDataGridViewTextBoxColumn.ValueMember = "Code";
+            // 
+            // codeDataGridViewTextBoxColumn
+            // 
+            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
+            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
+            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 530);
+            this.ClientSize = new System.Drawing.Size(1074, 542);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -386,6 +466,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dbObjectDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.universitati1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -430,6 +513,15 @@
         private System.Windows.Forms.Button buttonDeleteUniv;
         private System.Windows.Forms.Button buttonDeleteFacult;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource tableBindingSource;
+        private dbObjectDataSetTableAdapters.TableTableAdapter tableTableAdapter;
+        private System.Windows.Forms.BindingSource universitati1BindingSource;
+        private dbObjectDataSetTableAdapters.Universitati1TableAdapter universitati1TableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameUnivDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn numeFacDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
     }
 }
 

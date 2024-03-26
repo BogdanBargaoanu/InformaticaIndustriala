@@ -23,6 +23,10 @@ namespace lab3
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dbObjectDataSet.Universitati1' table. You can move, or remove it, as needed.
+            this.universitati1TableAdapter.Fill(this.dbObjectDataSet.Universitati1);
+            // TODO: This line of code loads data into the 'dbObjectDataSet.Table' table. You can move, or remove it, as needed.
+            this.tableTableAdapter.Fill(this.dbObjectDataSet.Table);
             // TODO: This line of code loads data into the 'dbObjectDataSet.Universitati' table. You can move, or remove it, as needed.
             this.universitatiTableAdapter.Fill(this.dbObjectDataSet.Universitati);
             this.facultatiTableAdapter.FillByCode(this.dbObjectDataSet.Facultati, (int)listBoxUniversitati.SelectedValue);
