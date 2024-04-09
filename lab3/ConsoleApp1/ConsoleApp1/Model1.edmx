@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dbObjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Facultati">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="int" Nullable="false" />
+          <Property Name="NumeFac" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Universitati">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="NameUniv" Type="text" Nullable="false" />
+          <Property Name="City" Type="text" Nullable="false" />
+          <Property Name="Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Facultati_Universitati">
+          <End Role="Universitati" Type="Self.Universitati" Multiplicity="1" />
+          <End Role="Facultati" Type="Self.Facultati" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Universitati">
+              <PropertyRef Name="Code" />
+            </Principal>
+            <Dependent Role="Facultati">
+              <PropertyRef Name="Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbObjectModelStoreContainer">
+          <EntitySet Name="Facultati" EntityType="Self.Facultati" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Universitati" EntityType="Self.Universitati" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Facultati_Universitati" Association="Self.FK_Facultati_Universitati">
+            <End Role="Universitati" EntitySet="Universitati" />
+            <End Role="Facultati" EntitySet="Facultati" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbObjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Facultati">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="Int32" Nullable="false" />
+          <Property Name="NumeFac" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Universitati" Relationship="Self.FK_Facultati_Universitati" FromRole="Facultati" ToRole="Universitati" />
+        </EntityType>
+        <EntityType Name="Universitati">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="NameUniv" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Facultatis" Relationship="Self.FK_Facultati_Universitati" FromRole="Universitati" ToRole="Facultati" />
+        </EntityType>
+        <Association Name="FK_Facultati_Universitati">
+          <End Role="Universitati" Type="Self.Universitati" Multiplicity="1" />
+          <End Role="Facultati" Type="Self.Facultati" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Universitati">
+              <PropertyRef Name="Code" />
+            </Principal>
+            <Dependent Role="Facultati">
+              <PropertyRef Name="Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbObjectEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Facultatis" EntityType="Self.Facultati" />
+          <EntitySet Name="Universitatis" EntityType="Self.Universitati" />
+          <AssociationSet Name="FK_Facultati_Universitati" Association="Self.FK_Facultati_Universitati">
+            <End Role="Universitati" EntitySet="Universitatis" />
+            <End Role="Facultati" EntitySet="Facultatis" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbObjectModelStoreContainer" CdmEntityContainer="dbObjectEntities">
+          <EntitySetMapping Name="Facultatis">
+            <EntityTypeMapping TypeName="dbObjectModel.Facultati">
+              <MappingFragment StoreEntitySet="Facultati">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="NumeFac" ColumnName="NumeFac" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Universitatis">
+            <EntityTypeMapping TypeName="dbObjectModel.Universitati">
+              <MappingFragment StoreEntitySet="Universitati">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NameUniv" ColumnName="NameUniv" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

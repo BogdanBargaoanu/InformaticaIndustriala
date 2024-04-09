@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dbObject" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Automatica\Downloads\dbObject.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="ConsoleApp2.Properties.Settings" SettingsPropertyName="dbObjectConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Facultati" Member="Facultatis">
+    <Type Name="Facultati">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumeFac" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="Universitati_Facultati" Member="Universitati" ThisKey="Code" OtherKey="Code" Type="Universitati" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Universitati" Member="Universitatis">
+    <Type Name="Universitati">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NameUniv" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="City" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="Universitati_Facultati" Member="Facultatis" ThisKey="Code" OtherKey="Code" Type="Facultati" />
+    </Type>
+  </Table>
+</Database>
