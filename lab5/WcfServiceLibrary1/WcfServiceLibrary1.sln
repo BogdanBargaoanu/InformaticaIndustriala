@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "form", "..\form\form.csproj
 		{B40F686E-AA6B-4743-BF32-5AE017B52DB3} = {B40F686E-AA6B-4743-BF32-5AE017B52DB3}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "..\Service\Service.csproj", "{A9021F3C-222C-4684-9239-56F764118285}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{2F00267A-0077-4AB1-9756-022A26A99517}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F00267A-0077-4AB1-9756-022A26A99517}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F00267A-0077-4AB1-9756-022A26A99517}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9021F3C-222C-4684-9239-56F764118285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9021F3C-222C-4684-9239-56F764118285}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9021F3C-222C-4684-9239-56F764118285}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9021F3C-222C-4684-9239-56F764118285}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
