@@ -12,9 +12,18 @@ namespace Client
 {
     public partial class TaskManagement : Form
     {
-        public TaskManagement()
+        private Form frmParinte;
+        private localhost.WebService1 webService;
+        public TaskManagement(Form frmParinte, localhost.WebService1 webService)
         {
             InitializeComponent();
+            this.frmParinte = frmParinte; 
+            this.webService = webService;
+        }
+
+        private void TaskManagement_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmParinte.Close();
         }
     }
 }

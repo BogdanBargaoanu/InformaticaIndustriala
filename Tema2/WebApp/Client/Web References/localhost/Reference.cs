@@ -35,6 +35,16 @@ namespace Client.localhost {
         
         private System.Threading.SendOrPostCallback AddUserOperationCompleted;
         
+        private System.Threading.SendOrPostCallback GetTasksOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetTasksByUserOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback AddTaskOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback DeleteTaskOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback UpdateTaskOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -81,6 +91,21 @@ namespace Client.localhost {
         
         /// <remarks/>
         public event AddUserCompletedEventHandler AddUserCompleted;
+        
+        /// <remarks/>
+        public event GetTasksCompletedEventHandler GetTasksCompleted;
+        
+        /// <remarks/>
+        public event GetTasksByUserCompletedEventHandler GetTasksByUserCompleted;
+        
+        /// <remarks/>
+        public event AddTaskCompletedEventHandler AddTaskCompleted;
+        
+        /// <remarks/>
+        public event DeleteTaskCompletedEventHandler DeleteTaskCompleted;
+        
+        /// <remarks/>
+        public event UpdateTaskCompletedEventHandler UpdateTaskCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/HelloWorld", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -168,6 +193,161 @@ namespace Client.localhost {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetTasks", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Task[] GetTasks() {
+            object[] results = this.Invoke("GetTasks", new object[0]);
+            return ((Task[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetTasksAsync() {
+            this.GetTasksAsync(null);
+        }
+        
+        /// <remarks/>
+        public void GetTasksAsync(object userState) {
+            if ((this.GetTasksOperationCompleted == null)) {
+                this.GetTasksOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetTasksOperationCompleted);
+            }
+            this.InvokeAsync("GetTasks", new object[0], this.GetTasksOperationCompleted, userState);
+        }
+        
+        private void OnGetTasksOperationCompleted(object arg) {
+            if ((this.GetTasksCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetTasksCompleted(this, new GetTasksCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetTasksByUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Task[] GetTasksByUser(int idUser) {
+            object[] results = this.Invoke("GetTasksByUser", new object[] {
+                        idUser});
+            return ((Task[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetTasksByUserAsync(int idUser) {
+            this.GetTasksByUserAsync(idUser, null);
+        }
+        
+        /// <remarks/>
+        public void GetTasksByUserAsync(int idUser, object userState) {
+            if ((this.GetTasksByUserOperationCompleted == null)) {
+                this.GetTasksByUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetTasksByUserOperationCompleted);
+            }
+            this.InvokeAsync("GetTasksByUser", new object[] {
+                        idUser}, this.GetTasksByUserOperationCompleted, userState);
+        }
+        
+        private void OnGetTasksByUserOperationCompleted(object arg) {
+            if ((this.GetTasksByUserCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetTasksByUserCompleted(this, new GetTasksByUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/AddTask", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool AddTask(string taskName, string description, System.DateTime dueDate, int idUser) {
+            object[] results = this.Invoke("AddTask", new object[] {
+                        taskName,
+                        description,
+                        dueDate,
+                        idUser});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void AddTaskAsync(string taskName, string description, System.DateTime dueDate, int idUser) {
+            this.AddTaskAsync(taskName, description, dueDate, idUser, null);
+        }
+        
+        /// <remarks/>
+        public void AddTaskAsync(string taskName, string description, System.DateTime dueDate, int idUser, object userState) {
+            if ((this.AddTaskOperationCompleted == null)) {
+                this.AddTaskOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddTaskOperationCompleted);
+            }
+            this.InvokeAsync("AddTask", new object[] {
+                        taskName,
+                        description,
+                        dueDate,
+                        idUser}, this.AddTaskOperationCompleted, userState);
+        }
+        
+        private void OnAddTaskOperationCompleted(object arg) {
+            if ((this.AddTaskCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AddTaskCompleted(this, new AddTaskCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DeleteTask", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool DeleteTask(int id) {
+            object[] results = this.Invoke("DeleteTask", new object[] {
+                        id});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void DeleteTaskAsync(int id) {
+            this.DeleteTaskAsync(id, null);
+        }
+        
+        /// <remarks/>
+        public void DeleteTaskAsync(int id, object userState) {
+            if ((this.DeleteTaskOperationCompleted == null)) {
+                this.DeleteTaskOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDeleteTaskOperationCompleted);
+            }
+            this.InvokeAsync("DeleteTask", new object[] {
+                        id}, this.DeleteTaskOperationCompleted, userState);
+        }
+        
+        private void OnDeleteTaskOperationCompleted(object arg) {
+            if ((this.DeleteTaskCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DeleteTaskCompleted(this, new DeleteTaskCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/UpdateTask", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool UpdateTask(int id, string taskName, string description, System.DateTime dueDate) {
+            object[] results = this.Invoke("UpdateTask", new object[] {
+                        id,
+                        taskName,
+                        description,
+                        dueDate});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void UpdateTaskAsync(int id, string taskName, string description, System.DateTime dueDate) {
+            this.UpdateTaskAsync(id, taskName, description, dueDate, null);
+        }
+        
+        /// <remarks/>
+        public void UpdateTaskAsync(int id, string taskName, string description, System.DateTime dueDate, object userState) {
+            if ((this.UpdateTaskOperationCompleted == null)) {
+                this.UpdateTaskOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateTaskOperationCompleted);
+            }
+            this.InvokeAsync("UpdateTask", new object[] {
+                        id,
+                        taskName,
+                        description,
+                        dueDate}, this.UpdateTaskOperationCompleted, userState);
+        }
+        
+        private void OnUpdateTaskOperationCompleted(object arg) {
+            if ((this.UpdateTaskCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.UpdateTaskCompleted(this, new UpdateTaskCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -227,6 +407,75 @@ namespace Client.localhost {
             }
             set {
                 this.passwordField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class Task {
+        
+        private int idField;
+        
+        private string taskNameField;
+        
+        private string descriptionField;
+        
+        private System.DateTime dueDateField;
+        
+        private int idUserField;
+        
+        /// <remarks/>
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string taskName {
+            get {
+                return this.taskNameField;
+            }
+            set {
+                this.taskNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime dueDate {
+            get {
+                return this.dueDateField;
+            }
+            set {
+                this.dueDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int idUser {
+            get {
+                return this.idUserField;
+            }
+            set {
+                this.idUserField = value;
             }
         }
     }
@@ -296,6 +545,136 @@ namespace Client.localhost {
         private object[] results;
         
         internal AddUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void GetTasksCompletedEventHandler(object sender, GetTasksCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetTasksCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetTasksCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Task[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Task[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void GetTasksByUserCompletedEventHandler(object sender, GetTasksByUserCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetTasksByUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetTasksByUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Task[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Task[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void AddTaskCompletedEventHandler(object sender, AddTaskCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AddTaskCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal AddTaskCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void DeleteTaskCompletedEventHandler(object sender, DeleteTaskCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DeleteTaskCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DeleteTaskCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void UpdateTaskCompletedEventHandler(object sender, UpdateTaskCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class UpdateTaskCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal UpdateTaskCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

@@ -36,6 +36,9 @@ namespace Client
                     if(user.username == textBoxUsername.Text && user.password == textBoxPw.Text)
                     {
                         MessageBox.Show("Login successful.", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        TaskManagement taskManagement = new TaskManagement(this, webService);
+                        this.Hide();
+                        taskManagement.ShowDialog();
                         return;
                     }
                 }
