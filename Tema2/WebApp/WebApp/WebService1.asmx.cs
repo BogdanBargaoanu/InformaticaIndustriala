@@ -56,5 +56,31 @@ namespace WebApp
 
             return users;
         }
+
+        [WebMethod]
+        public bool AddUser(string username, string password)
+        {
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\InformaticaIndustriala\\Tema2\\WebApp\\Client\\Database1.mdf;Integrated Security=True";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string sql = "INSERT INTO Users (username, password) VALUES (@username, @password)";
+                    SqlCommand command = new SqlCommand(sql, connection);
+                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@password", password);
+
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }
