@@ -30,11 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.taskNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dueDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idUserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.taskBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,6 +45,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonSterge = new System.Windows.Forms.Button();
             this.buttonAdauga = new System.Windows.Forms.Button();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.taskNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dueDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -83,41 +83,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(959, 265);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // taskNameDataGridViewTextBoxColumn
-            // 
-            this.taskNameDataGridViewTextBoxColumn.DataPropertyName = "taskName";
-            this.taskNameDataGridViewTextBoxColumn.HeaderText = "taskName";
-            this.taskNameDataGridViewTextBoxColumn.Name = "taskNameDataGridViewTextBoxColumn";
-            this.taskNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dueDateDataGridViewTextBoxColumn
-            // 
-            this.dueDateDataGridViewTextBoxColumn.DataPropertyName = "dueDate";
-            this.dueDateDataGridViewTextBoxColumn.HeaderText = "dueDate";
-            this.dueDateDataGridViewTextBoxColumn.Name = "dueDateDataGridViewTextBoxColumn";
-            this.dueDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idUserDataGridViewTextBoxColumn
-            // 
-            this.idUserDataGridViewTextBoxColumn.DataPropertyName = "idUser";
-            this.idUserDataGridViewTextBoxColumn.HeaderText = "idUser";
-            this.idUserDataGridViewTextBoxColumn.Name = "idUserDataGridViewTextBoxColumn";
-            this.idUserDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // taskBindingSource
             // 
@@ -211,7 +176,7 @@
             this.buttonRenunta.Name = "buttonRenunta";
             this.buttonRenunta.Size = new System.Drawing.Size(92, 34);
             this.buttonRenunta.TabIndex = 2;
-            this.buttonRenunta.Text = "Renunta";
+            this.buttonRenunta.Text = "Cancel";
             this.buttonRenunta.UseVisualStyleBackColor = true;
             this.buttonRenunta.Click += new System.EventHandler(this.buttonRenunta_Click);
             // 
@@ -222,7 +187,7 @@
             this.buttonSalveaza.Name = "buttonSalveaza";
             this.buttonSalveaza.Size = new System.Drawing.Size(92, 34);
             this.buttonSalveaza.TabIndex = 1;
-            this.buttonSalveaza.Text = "Salveaza";
+            this.buttonSalveaza.Text = "Save";
             this.buttonSalveaza.UseVisualStyleBackColor = true;
             this.buttonSalveaza.Click += new System.EventHandler(this.buttonSalveaza_Click);
             // 
@@ -247,6 +212,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(608, 164);
             this.richTextBox1.TabIndex = 4;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // panel1
             // 
@@ -265,8 +231,9 @@
             this.buttonSterge.Name = "buttonSterge";
             this.buttonSterge.Size = new System.Drawing.Size(92, 31);
             this.buttonSterge.TabIndex = 1;
-            this.buttonSterge.Text = "Sterge";
+            this.buttonSterge.Text = "Delete";
             this.buttonSterge.UseVisualStyleBackColor = true;
+            this.buttonSterge.Click += new System.EventHandler(this.buttonSterge_Click);
             // 
             // buttonAdauga
             // 
@@ -275,9 +242,46 @@
             this.buttonAdauga.Name = "buttonAdauga";
             this.buttonAdauga.Size = new System.Drawing.Size(92, 31);
             this.buttonAdauga.TabIndex = 0;
-            this.buttonAdauga.Text = "Adauga";
+            this.buttonAdauga.Text = "Add";
             this.buttonAdauga.UseVisualStyleBackColor = true;
             this.buttonAdauga.Click += new System.EventHandler(this.buttonAdauga_Click);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // taskNameDataGridViewTextBoxColumn
+            // 
+            this.taskNameDataGridViewTextBoxColumn.DataPropertyName = "taskName";
+            this.taskNameDataGridViewTextBoxColumn.HeaderText = "Task name";
+            this.taskNameDataGridViewTextBoxColumn.Name = "taskNameDataGridViewTextBoxColumn";
+            this.taskNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dueDateDataGridViewTextBoxColumn
+            // 
+            this.dueDateDataGridViewTextBoxColumn.DataPropertyName = "dueDate";
+            this.dueDateDataGridViewTextBoxColumn.HeaderText = "Due date";
+            this.dueDateDataGridViewTextBoxColumn.Name = "dueDateDataGridViewTextBoxColumn";
+            this.dueDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idUserDataGridViewTextBoxColumn
+            // 
+            this.idUserDataGridViewTextBoxColumn.DataPropertyName = "idUser";
+            this.idUserDataGridViewTextBoxColumn.HeaderText = "idUser";
+            this.idUserDataGridViewTextBoxColumn.Name = "idUserDataGridViewTextBoxColumn";
+            this.idUserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idUserDataGridViewTextBoxColumn.Visible = false;
             // 
             // TaskManagement
             // 
@@ -309,11 +313,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource taskBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn taskNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dueDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idUserDataGridViewTextBoxColumn;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SplitContainer splitContainer1;
@@ -328,5 +327,10 @@
         private System.Windows.Forms.Button buttonAdauga;
         private System.Windows.Forms.Button buttonRenunta;
         private System.Windows.Forms.Button buttonSalveaza;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn taskNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dueDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idUserDataGridViewTextBoxColumn;
     }
 }

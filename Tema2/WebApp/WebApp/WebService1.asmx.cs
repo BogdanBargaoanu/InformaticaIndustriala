@@ -19,12 +19,8 @@ namespace WebApp
     public class WebService1 : System.Web.Services.WebService
     {
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\InformaticaIndustriala\\Tema2\\WebApp\\Client\\Database1.mdf;Integrated Security=True";
-        [WebMethod]
-        public string HelloWorld()
-        {
-            return "Hello World";
-        }
 
+        #region get users
         [WebMethod]
         public List<User> GetUsers()
         {
@@ -56,7 +52,9 @@ namespace WebApp
 
             return users;
         }
+        #endregion
 
+        #region add user
         [WebMethod]
         public bool AddUser(string username, string password)
         {
@@ -82,7 +80,9 @@ namespace WebApp
                 return false;
             }
         }
+        #endregion
 
+        #region get tasks
         [WebMethod]
         public List<Task> GetTasks()
         {
@@ -116,6 +116,9 @@ namespace WebApp
 
             return tasks;
         }
+        #endregion
+
+        #region get tasks by user
         [WebMethod]
         public List<Task> GetTasksByUser(int idUser)
         {
@@ -150,7 +153,9 @@ namespace WebApp
 
             return tasks;
         }
+        #endregion
 
+        #region add task
         [WebMethod]
         public bool AddTask(string taskName, string description, DateTime dueDate, int idUser)
         {
@@ -177,7 +182,9 @@ namespace WebApp
                 return false;
             }
         }
+        #endregion
 
+        #region delete task
         [WebMethod]
         public bool DeleteTask(int id)
         {
@@ -202,7 +209,9 @@ namespace WebApp
                 return false;
             }
         }
+        #endregion
 
+        #region update task
         [WebMethod]
         public bool UpdateTask(int id, string taskName, string description, DateTime dueDate)
         {
@@ -229,6 +238,7 @@ namespace WebApp
             {
                 return false;
             }
-        }   
+        }
+        #endregion
     }
 }
