@@ -1,0 +1,30 @@
+<div class="container my-5">
+    <h1 class="mb-3">Angajati</h1>
+
+    @if (angajati && angajati.length >0)
+    {
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ld</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (angajat of angajati; track $index)
+            {
+            <tr>
+                <td>{{angajat.id}}</td>
+                <td>{{angajat.name}}</td>
+                <td>{{angajat.email}}</td>
+                <td>{{angajat.phone}}</td>
+                <td>{{angajat.salary}}</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    }
+</div>
