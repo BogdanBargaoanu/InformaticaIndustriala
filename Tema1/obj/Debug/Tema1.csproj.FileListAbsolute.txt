@@ -18,3 +18,13 @@ E:\InformaticaIndustriala\Tema1\obj\Debug\Tema1.csproj.GenerateResource.cache
 E:\InformaticaIndustriala\Tema1\obj\Debug\Tema1.csproj.CoreCompileInputs.cache
 E:\InformaticaIndustriala\Tema1\obj\Debug\Tema1.exe
 E:\InformaticaIndustriala\Tema1\obj\Debug\Tema1.pdb
+E:\facultate\informatica_industriala\InformaticaIndustriala\Tema1\bin\Debug\Tema1.exe.config
+E:\facultate\informatica_industriala\InformaticaIndustriala\Tema1\bin\Debug\Tema1.exe
+E:\facultate\informatica_industriala\InformaticaIndustriala\Tema1\bin\Debug\Tema1.pdb
+E:\facultate\informatica_industriala\InformaticaIndustriala\Tema1\obj\Debug\Tema1.csproj.AssemblyReference.cache
+E:\facultate\informatica_industriala\InformaticaIndustriala\Tema1\obj\Debug\Tema1.Form1.resources
+E:\facultate\informatica_industriala\InformaticaIndustriala\Tema1\obj\Debug\Tema1.Properties.Resources.resources
+E:\facultate\informatica_industriala\InformaticaIndustriala\Tema1\obj\Debug\Tema1.csproj.GenerateResource.cache
+E:\facultate\informatica_industriala\InformaticaIndustriala\Tema1\obj\Debug\Tema1.csproj.CoreCompileInputs.cache
+E:\facultate\informatica_industriala\InformaticaIndustriala\Tema1\obj\Debug\Tema1.exe
+E:\facultate\informatica_industriala\InformaticaIndustriala\Tema1\obj\Debug\Tema1.pdb
